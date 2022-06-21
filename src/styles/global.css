@@ -1,0 +1,19 @@
+/*
+    São os conjuntos de pacotes que vamos utilizar do TailWind
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+    Dá para passar o CSS dessa forma sem a necessidade de ficar colocando classes longas nas tags html
+*/
+
+.title {
+    @apply text-5xl font-bold text-red-500
+}
+
+body {
+    @apply bg-zinc-900 text-zinc-200
+}
