@@ -2,7 +2,12 @@
 
 import { gql, useQuery } from "@apollo/client"
 import { useEffect } from "react"
+import { Header } from "./components/Header";
+import { Lesson } from "./components/Lesson";
+import { Sidebar } from "./components/Sidebar";
+import { Video } from "./components/Video";
 import { client } from "./lib/apolo"
+import { Event } from "./pages/Event";
 
 // gql para ter a sintax highlight
 const GET_LESSONS_QUERRY = gql`
@@ -38,11 +43,7 @@ function App() {
   console.log(data);
   // A estilização no TailWind é feita totalmente por classes
   return (
-    <ul>
-      {data?.lessons.map(lesson => {
-        return <li key={lesson.id}>{lesson.title}</li>
-      })}
-    </ul>
+      <Event />
   )
 }
 export default App

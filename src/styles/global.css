@@ -15,5 +15,6 @@
 }
 
 body {
-    @apply bg-zinc-900 text-zinc-200
+    @apply bg-gray-900 text-zinc-100;
+    -webkit-font-smoothing: antialiased;
 }
