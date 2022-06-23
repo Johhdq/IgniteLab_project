@@ -39,8 +39,6 @@ function App() {
   // }, [])
 
   const { data } = useQuery<{ lessons: Lesson[] }>(GET_LESSONS_QUERRY);
-
-  console.log(data);
   // A estilização no TailWind é feita totalmente por classes
   return (
       <Event />
