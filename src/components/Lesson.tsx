@@ -2,9 +2,6 @@ import { CheckCircle, Lock } from 'phosphor-react'
 import { isPast, format } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 
-
-// format para formatar a data
-
 // Vão ser as informações variáveis que podem mudar para este componente (Lesson)
 interface LessonProps {
     title: string;
@@ -16,6 +13,7 @@ interface LessonProps {
 export function Lesson(props: LessonProps) {
     // isPast é uma função do date-fns que verifica se uma data passada por parâmetro está no passado ou não
     const isLessonAvailable = isPast(props.availableAt);
+    // format para formatar a data
     const availableDateFormatted = format(props.availableAt, "EEEE' • 'd' de 'MMMM' • 'k'h'mm", {
         locale: ptBR
     })
@@ -44,7 +42,7 @@ export function Lesson(props: LessonProps) {
                         {props.type == 'live' ? 'AO VIVO' : 'AULA PRÁTICA'}
                     </span>
                 </header>
-
+                
                 <strong className="text-gray-200 mt-4 block">
                     {props.title}
                 </strong>
